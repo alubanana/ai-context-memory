@@ -1,0 +1,13 @@
+{
+  "reviews": [
+    {
+      "id": "file:replace-with-source-id",
+      "expected_sha256": "COPY_SHA256_FROM_SCAN",
+      "disposition": "state_updated",
+      "note": "填写实际阅读范围及结论",
+      "outputs": [
+        "state/current.md"
+      ]
+    }
+  ]
+}

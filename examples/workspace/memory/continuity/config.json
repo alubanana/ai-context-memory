@@ -1,0 +1,17 @@
+{
+  "since": "2026-01-01T00:00:00Z",
+  "threads": {
+    "11111111-1111-4111-8111-111111111111": {
+      "owner": "research",
+      "title": "虚构的科普阅读器项目"
+    }
+  },
+  "files": [
+    {
+      "id": "reading-plan",
+      "owner": "research",
+      "title": "阅读器研究计划",
+      "path": "notes/research-plan.md"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{"type": "session_meta", "payload": {"id": "11111111-1111-4111-8111-111111111111"}}
+{"type": "response_item", "timestamp": "2026-01-02T09:00:00Z", "payload": {"id": "fiction-1", "role": "user", "content": [{"type": "input_text", "text": "科普阅读器第一阶段只验证来源追溯，摘要风格实验留到第二阶段。"}]}}
+{"type": "response_item", "timestamp": "2026-01-02T09:01:00Z", "payload": {"role": "assistant", "content": [{"type": "text", "text": "以下是虚构助手回复，不应作为本人事实进入索引。"}]}}
+{"type": "response_item", "timestamp": "2026-01-02T09:02:00Z", "payload": {"role": "user", "content": [{"type": "input_text", "text": "<heartbeat>虚构自动提示，应被过滤</heartbeat>"}]}}

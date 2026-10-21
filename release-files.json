@@ -1,0 +1,29 @@
+{
+  "version": "0.1.0",
+  "files": [
+    ".gitattributes",
+    ".github/workflows/pages.yml",
+    ".github/workflows/validate.yml",
+    ".gitignore",
+    "ARCHITECTURE.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "demo.py",
+    "docs/index.html",
+    "docs/preview.png",
+    "examples/sessions/fictional-session.jsonl",
+    "examples/workspace/memory/classification/tags.json",
+    "examples/workspace/memory/continuity/config.json",
+    "examples/workspace/notes/acceptance.md",
+    "examples/workspace/notes/research-plan.md",
+    "release-files.json",
+    "templates/config.json",
+    "templates/review-plan.json",
+    "tests/test_pipeline.py",
+    "tools/continuity.py",
+    "tools/knowledge_gate.py",
+    "tools/prompt_intake.py",
+    "web/demo.html"
+  ]
+}
