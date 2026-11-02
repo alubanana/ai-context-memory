@@ -4,4 +4,11 @@
 const DATA=JSON.parse(document.querySelector('#demo-data').textContent),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));let stage=0;
 function render(){const r=DATA.stages[stage].report;document.querySelector('nav').innerHTML=DATA.stages.map((s,i)=>'<button data-stage="'+i+'" aria-pressed="'+(i===stage)+'">'+esc(s.name)+'</button>').join('');document.querySelector('#stats').innerHTML=[['来源',r.sources.length],['待核读',r.pending_count],['已签收',r.sources.filter(s=>s.status==='reviewed').length]].map(([l,v])=>'<div class="stat"><small>'+l+'</small><b>'+v+'</b></div>').join('');document.querySelector('#records').innerHTML=r.sources.map(s=>'<article class="record"><div class="record-top"><strong>'+esc(s.title)+'</strong><span class="status '+(s.status==='reviewed'?'ok':'')+'">'+(s.status==='reviewed'?'已核读':'待核读')+'</span></div><p>'+esc(s.path)+'</p><code>SHA256 '+esc(s.sha256?.slice(0,20))+'…</code>'+(s.note?'<p>'+esc(s.note)+'</p>':'')+'</article>').join('');document.querySelector('#check').textContent=stage===2?'来源已更新 · 旧版本签收被拒绝':stage===1?'来源与状态输出版本一致':'发现 2 项待核读来源';}
 document.querySelector('nav').addEventListener('click',e=>{const b=e.target.closest('[data-stage]');if(b){stage=Number(b.dataset.stage);render();}});render();
-</script></body></html>
+</script><div id="site-analytics-controls" hidden style="max-width:1240px;margin:20px auto;padding:12px 24px;display:none;gap:18px;align-items:center;font:12px system-ui;color:inherit"><a href="/">个人网站 ↗</a><a href="/privacy/">访问统计</a><button id="analytics-toggle" type="button" style="font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer">关闭统计</button></div>
+<script>
+if(location.hostname==='alubanana.github.io'&&location.protocol==='https:'){
+ const controls=document.getElementById('site-analytics-controls');controls.hidden=false;controls.style.display='flex';
+ const tracker=document.createElement('script');tracker.src='/site-assets/analytics.js';tracker.dataset.endpoint='https://annan-site-analytics.regalpig32.chatgpt.site/api/collect';document.head.append(tracker);
+}
+</script>
+</body></html>
